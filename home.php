@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require_once('./app/views/inc/head.php'); ?>
+    <?php 
+    require_once('./app/views/inc/head.php'); 
+    ?>
+
 </head>
 <body>
 

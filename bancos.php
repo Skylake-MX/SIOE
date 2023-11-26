@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
 
-    <?php require_once('./app/views/inc/head.php'); ?>
+    <?php require_once('./app/views/inc/head.php');
+        require_once 'user_session.php';
+        require_once 'user.php';
+         ?>
+    
 </head>
 <body>
 

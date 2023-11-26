@@ -1,4 +1,4 @@
-        <div class="container">
+<div class="container">
             <div class="page-header">
               <h1 class="all-tittles"><small>Inicio</small></h1>
             </div>
@@ -37,3 +37,4 @@
         </section>
         </div>
     </div>
+

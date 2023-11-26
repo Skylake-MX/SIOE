@@ -4,10 +4,12 @@
                 <figure>
                    <img src="app/views/assets/icons/user01.png" alt="user-picture" class="img-responsive img-circle center-box">
                 </figure>
+
                 <li style="color:#fff; cursor:default;">
-                    <span class="all-tittles">Administrador</span>
+                    <span class="all-tittles">
+                    </span>
                 </li>
-                <li  class="tooltips-general exit-system-button" data-href="index.html" data-placement="bottom" title="Salir del sistema">
+                <li  class="tooltips-general exit-system-button" data-href="logout.php" data-placement="bottom" title="Salir del sistema">
                     <i class="zmdi zmdi-power"></i>
                 </li>
                 <li  class="tooltips-general search-book-button" data-href="searchbook.html" data-placement="bottom" title="Buscar folio">

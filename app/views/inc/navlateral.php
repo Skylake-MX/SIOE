@@ -1,3 +1,4 @@
+
 <div class="navbar-lateral full-reset">
         <div class="visible-xs font-movile-menu mobile-menu-button"></div>
         <div class="full-reset container-menu-movile nav-lateral-scroll">
@@ -10,7 +11,7 @@
                 <figure>
                     <img src="app/views/assets/icons/logo.png" alt="Logo OE" class="img-responsive center-box" style="width:55%;">
                 </figure>
-                <p class="text-center" style="padding-top: 15px;">SIOE</p>
+                <p class="text-center" style="padding-top: 15px;">SIOE </p>
             </div>
             <div class="nav-lateral-divider full-reset"></div>
             <div class="full-reset nav-lateral-list-menu">

@@ -1,39 +1,5 @@
 <?php
-// Datos de conexión a la base de datos
-$host = '194.5.156.145';
-$usuario_db = 'u882853344_root';
-$contrasena_db = 'Gheal910427.*';
-$nombre_bd = 'u882853344_test';
-
-// Datos del formulario de inicio de sesión
-$usuario = $_POST['username'];
-$contrasena = $_POST['password'];
-
-var_dump($_POST);
-// Crear una conexión a la base de datos
-$conexion = new mysqli($host, $usuario_db, $contrasena_db, $nombre_bd);
-
-// Verificar la conexión
-if ($conexion->connect_error) {
-    die("Error de conexión: " . $conexion->connect_error);
-}
-else{
-    echo "conexion exitosa";
-}
-
-// // Consulta para verificar las credenciales del usuario
-// $sql = "SELECT * FROM usuarios WHERE username = '$usuario' AND password = '$contrasena'";
-// $resultado = $conexion->query($sql);
-
-// if ($resultado->num_rows == 1) {
-//     // Las credenciales son válidas, el usuario ha iniciado sesión con éxito
-//     header("Location: inicio_exitoso.html"); // Redirigir a una página de inicio exitoso
-// } else {
-//     echo "Error: Credenciales incorrectas. Por favor, inténtelo de nuevo.";
-// }
-
-// // Cerrar la conexión
-// $conexion->close();
+// var_dump($_POST);
 ?>
 
 
@@ -67,27 +33,27 @@ else{
            <i class="zmdi zmdi-account-circle zmdi-hc-5x"></i>
        </p>
        <h4 class="text-center all-tittles" style="margin-bottom: 30px;">inicia sesión con tu cuenta</h4>
-       <form action="index.php" method="POST">
+       <form action="" method="POST">
             <div class="group-material-login">
-              <input type="text" class="material-login-control" required="" maxlength="70">
+              <input type="text" class="material-login-control" placeholder="Nombres de usuario" name="noEmpleado" required="" autocomplete="off" maxlength="70">
               <span class="highlight-login"></span>
               <span class="bar-login"></span>
               <label><i class="zmdi zmdi-account"></i> &nbsp; Nombres</label>
             </div><br>
             <div class="group-material-login">
-              <input type="password" class="material-login-control" required="" maxlength="70">
+              <input type="password" class="material-login-control" placeholder="Contraseña" name="password" required="" autocomplete="off" maxlength="70">
               <span class="highlight-login"></span>
               <span class="bar-login"></span>
               <label><i class="zmdi zmdi-lock"></i> &nbsp; Contraseña</label>
             </div>
             <div class="group-material">
-                <select class="material-control-login">
+                <!-- <select class="material-control-login">
                     <option value="" disabled="" selected="">Tipo de usuario</option>
                     <option value="Implementaciones">Implementaciones</option>
                     <option value="Comercial">Comercial</option>
                     <option value="Técnico">Técnico</option>
                     <option value="Administrador">Administrador</option>
-                </select>
+                </select> -->
             </div>
             <button class="btn-login" type="submit">Ingresar al sistema &nbsp; <i class="zmdi zmdi-arrow-right"></i></button>
         </form>
