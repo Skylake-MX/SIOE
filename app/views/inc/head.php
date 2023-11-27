@@ -17,5 +17,3 @@
 <script src="app/views/js/bootstrap.min.js"></script>
 <script src="app/views/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="app/views/js/main.js"></script>
-
-

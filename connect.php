@@ -1,10 +1,10 @@
 <?php
 // Datos de conexión a la base de datos
 $host = '194.5.156.145';
-$usuario_db = 'u882853344_SIOE';
+$usuario_db = 'u882853344_admin';
 $contrasena_db = 'Gheal910427.*';
-$nombre_bd = 'u882853344_admin';
-
+$nombre_bd = 'u882853344_SIOE';
+error_reporting(E_ALL ^ E_NOTICE);
 // Datos del formulario de inicio de sesión
 $usuario = $_POST['username'];
 $contrasena = $_POST['password'];
@@ -18,7 +18,7 @@ if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
 else{
-    echo "conexion exitosa";
+    //echo "conexion exitosa";
 }
 
 // // Consulta para verificar las credenciales del usuario

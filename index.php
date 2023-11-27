@@ -5,7 +5,6 @@ include_once 'user_session.php';
 $userSession = new UserSession();
 $user = new User();
 
-var_dump($_SESSION);
 
 if(isset($_SESSION['user'])){
     // echo "Sesion activa";
