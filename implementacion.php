@@ -1,10 +1,10 @@
 <?php
 
-include_once 'connect.php';
+require_once './connect.php';
 require_once 'user_session.php';
 require_once 'user.php';
 
-error_reporting(E_ALL ^ E_NOTICE); 
+error_reporting(0); 
 session_start();
 $currentUser = new User();
 $currentUser->setUser($_SESSION['user']);
@@ -12,11 +12,11 @@ $localidad = $currentUser->getLocalidad();
 $nombre =$currentUser->getNombre();
 $privilegio = $currentUser->getPrivilegio();
 
-var_dump($_POST);
+// var_dump($_POST);
 
     if(!empty($_POST)){
 
-        echo "Esto es un post";
+        // echo "Esto es un post";
 
         $id=$_POST['id'];  
         /* var_dump($id); */
@@ -199,12 +199,13 @@ var_dump($_POST);
             
 
             /* var_dump($result); */
-            $estatusOp="El registro para " . $idEquipoValue . " se actualizo correctamente. ";
+            $estatusOp="El registro para " . $id. " se actualizo correctamente. ";
     }
     else{
+        
     $id = $_GET['id'];
-    var_dump($_GET);
-    echo "esto es un get";
+    // var_dump($_GET);
+    // echo "esto es un get";
 
     $sql="SELECT * FROM bitacora WHERE id=:id";
     $query=$pdo->prepare($sql);
