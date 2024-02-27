@@ -1,4 +1,8 @@
-<div class="content-page-container full-reset custom-scroll-containers">
+<?php
+
+echo 
+
+'<div class="content-page-container full-reset custom-scroll-containers">
         <nav class="navbar-user-top full-reset">
             <ul class="list-unstyled full-reset">
                 <figure>
@@ -6,7 +10,7 @@
                 </figure>
 
                 <li style="color:#fff; cursor:default;">
-                    <span class="all-tittles">
+                    <span class="all-tittles">'.$nombre.'
                     </span>
                 </li>
                 <li  class="tooltips-general exit-system-button" data-href="logout.php" data-placement="bottom" title="Salir del sistema">
@@ -25,4 +29,5 @@
                     <i class="zmdi zmdi-swap"></i>
                 </li>
             </ul>
-        </nav>
+        </nav>'
+?>

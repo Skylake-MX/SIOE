@@ -35,13 +35,13 @@
        <h4 class="text-center all-tittles" style="margin-bottom: 30px;">inicia sesión con tu cuenta</h4>
        <form action="" method="POST">
             <div class="group-material-login">
-              <input type="text" class="material-login-control" placeholder="Nombres de usuario" name="noEmpleado" required="" autocomplete="off" maxlength="70">
+              <input type="text" class="material-login-control" placeholder="" name="noEmpleado" required="" autocomplete="off" maxlength="70">
               <span class="highlight-login"></span>
               <span class="bar-login"></span>
-              <label><i class="zmdi zmdi-account"></i> &nbsp; Nombres</label>
+              <label><i class="zmdi zmdi-account"></i> &nbsp; Usuario</label>
             </div><br>
             <div class="group-material-login">
-              <input type="password" class="material-login-control" placeholder="Contraseña" name="password" required="" autocomplete="off" maxlength="70">
+              <input type="password" class="material-login-control" placeholder="" name="password" required="" autocomplete="off" maxlength="70">
               <span class="highlight-login"></span>
               <span class="bar-login"></span>
               <label><i class="zmdi zmdi-lock"></i> &nbsp; Contraseña</label>

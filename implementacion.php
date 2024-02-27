@@ -292,232 +292,17 @@ $privilegio = $currentUser->getPrivilegio();
 
 
 <?php
-    if ($privilegio=="administrador"){
-    
-    echo    
-    
-    '<div class="navbar-lateral full-reset">
-        <div class="visible-xs font-movile-menu mobile-menu-button"></div>
-        <div class="full-reset container-menu-movile nav-lateral-scroll">
-            <div class="logo full-reset all-tittles">
-                <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button" style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i> 
-                <small>Sistema Integral Op. Electrónicas</small>
-            </div>
-            <div class="nav-lateral-divider full-reset"></div>
-            <div class="full-reset" style="padding: 10px 0; color:#fff;">
-                <figure>
-                    <img src="app/views/assets/icons/logo.png" alt="Logo OE" class="img-responsive center-box" style="width:55%;">
-                </figure>
-                <p class="text-center" style="padding-top: 15px;">SIOE ('.$privilegio.')</p>
-            </div>
-            <div class="nav-lateral-divider full-reset"></div>
-            <div class="full-reset nav-lateral-list-menu">
-                <ul class="list-unstyled">
-                    <li><a href="index.php"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
-                    <li>
-                        <div class="dropdown-menu-button"><i class="zmdi zmdi-case zmdi-hc-fw"></i>&nbsp;&nbsp; Administración <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
-                        <ul class="list-unstyled">
-                            <li><a href="listabancos.php"><i class="zmdi zmdi-balance zmdi-hc-fw"></i>&nbsp;&nbsp; Bancos</a></li>
-                            <li><a href="listatraslado.php"><i class="zmdi zmdi-truck zmdi-hc-fw"></i>&nbsp;&nbsp; Empresa de Traslado</a></li>
-                            <li><a href="listacategoria.php"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Segmento</a></li>
-                            <li><a href="listaseccion.php"><i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>&nbsp;&nbsp; Proveedor</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="dropdown-menu-button"><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Gestíon de usuarios <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
-                        <ul class="list-unstyled">
-                            <li><a href="listausuarios.php"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i>&nbsp;&nbsp; Agregar usuario</a></li>
-                            <li><a href="#"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>&nbsp;&nbsp; Implementaciones</a></li>
-                            <li><a href="#"><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Comercial</a></li>
-                            <li><a href="#"><i class="zmdi zmdi-walk zmdi-hc-fw"></i>&nbsp;&nbsp;  Técnico</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="dropdown-menu-button"><i class="zmdi zmdi-puzzle-piece zmdi-hc-fw"></i>&nbsp;&nbsp; Implementaciones <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
-                        <ul class="list-unstyled">
-                            <li><a href="bitacora.php"><i class="zmdi zmdi-calendar zmdi-hc-fw"></i>&nbsp;&nbsp; Bitacora general</a></li>
-                            <li><a href="implementacion.php"><i class="zmdi zmdi-file-plus zmdi-hc-fw"></i>&nbsp;&nbsp; Nueva solicitud</a></li>                           
-                            <li><a href="#"><i class="zmdi zmdi-card-alert zmdi-steam-square"></i>&nbsp;&nbsp; Visitas técnicas</a></li>
-                            <li><a href="#"><i class="zmdi zmdi-calendar-close zmdi-assignment"></i>&nbsp;&nbsp; Asignacion de cofre<span class="label label-danger pull-right label-mhover">7</span></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-devices-off zmdi-assignment-check"></i>&nbsp;&nbsp; Check-in<span class="label label-danger pull-right label-mhover">7</span></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-timer-off zmdi-calendar-check"></i>&nbsp;&nbsp; Plan de implementacion<span class="label label-danger pull-right label-mhover">7</span></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-timer-off zmdi-hc-fw"></i>&nbsp;&nbsp; Liberación<span class="label label-danger pull-right label-mhover">7</span></a></li>
+
+//<!-- AQUI EMPIEZA EL NAV LATERAL -->
+require_once 'app/views/inc/navlateral.php';
+//<!-- AQUI TERMINA EL NAV LATERAL -->
+
+// AQUI EMPIEZA EL NAV
+require_once 'app/views/inc/nav.php';
+// AQUI TERMINA EL NAV
 
 
-                        </ul>
-
-                    </li>
-                    <li><a href="#"><i class="zmdi zmdi-trending-up zmdi-hc-fw"></i>&nbsp;&nbsp; Estadisticos</a></li>
-                    <li><a href="#"><i class="zmdi zmdi-wrench zmdi-hc-fw"></i>&nbsp;&nbsp; Configuracion</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>';
-
-
-
-
-    }
-    elseif($privilegio=="implementaciones"){
-
-        echo    
-    
-    '<div class="navbar-lateral full-reset">
-        <div class="visible-xs font-movile-menu mobile-menu-button"></div>
-        <div class="full-reset container-menu-movile nav-lateral-scroll">
-            <div class="logo full-reset all-tittles">
-                <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button" style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i> 
-                <small>Sistema Integral Op. Electrónicas</small>
-            </div>
-            <div class="nav-lateral-divider full-reset"></div>
-            <div class="full-reset" style="padding: 10px 0; color:#fff;">
-                <figure>
-                    <img src="app/views/assets/icons/logo.png" alt="Logo OE" class="img-responsive center-box" style="width:55%;">
-                </figure>
-                <p class="text-center" style="padding-top: 15px;">SIOE ('.$privilegio.')</p>
-            </div>
-            <div class="nav-lateral-divider full-reset"></div>
-            <div class="full-reset nav-lateral-list-menu">
-                <ul class="list-unstyled">
-                    <li><a href="index.php"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
-                    <li>
-                        <div class="dropdown-menu-button"><i class="zmdi zmdi-case zmdi-hc-fw"></i>&nbsp;&nbsp; Administración <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
-                        <ul class="list-unstyled">
-                            <li><a href="listacategoria.php"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Segmento</a></li>
-                            <li><a href="listaseccion.php"><i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>&nbsp;&nbsp; Proveedor</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="dropdown-menu-button"><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Gestíon de usuarios <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
-                        <ul class="list-unstyled">
-                            <li><a href="listausuarios.php"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i>&nbsp;&nbsp; Agregar usuario</a></li>
-                            <li><a href="#"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>&nbsp;&nbsp; Implementaciones</a></li>
-                            <li><a href="#"><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Comercial</a></li>
-                            <li><a href="#"><i class="zmdi zmdi-walk zmdi-hc-fw"></i>&nbsp;&nbsp;  Técnico</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="dropdown-menu-button"><i class="zmdi zmdi-puzzle-piece zmdi-hc-fw"></i>&nbsp;&nbsp; Implementaciones <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
-                        <ul class="list-unstyled">
-                            <li><a href="bitacora.php"><i class="zmdi zmdi-calendar zmdi-hc-fw"></i>&nbsp;&nbsp; Bitacora general</a></li>
-                            <li><a href="implementacion.php"><i class="zmdi zmdi-file-plus zmdi-hc-fw"></i>&nbsp;&nbsp; Nueva solicitud</a></li>                           
-                            <li><a href="#"><i class="zmdi zmdi-card-alert zmdi-steam-square"></i>&nbsp;&nbsp; Visitas técnicas</a></li>
-                            <li><a href="#"><i class="zmdi zmdi-calendar-close zmdi-assignment"></i>&nbsp;&nbsp; Asignacion de cofre<span class="label label-danger pull-right label-mhover">7</span></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-devices-off zmdi-assignment-check"></i>&nbsp;&nbsp; Check-in<span class="label label-danger pull-right label-mhover">7</span></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-timer-off zmdi-calendar-check"></i>&nbsp;&nbsp; Plan de implementacion<span class="label label-danger pull-right label-mhover">7</span></a></li>
-                            <li><a href="#"><i class="zmdi zmdi-timer-off zmdi-hc-fw"></i>&nbsp;&nbsp; Liberación<span class="label label-danger pull-right label-mhover">7</span></a></li>
-
-
-                        </ul>
-
-                    </li>
-                    <li><a href="#"><i class="zmdi zmdi-trending-up zmdi-hc-fw"></i>&nbsp;&nbsp; Estadisticos</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>';
-
-
-
-    }elseif($privilegio=="comercial"){
-        echo    
-    
-        '<div class="navbar-lateral full-reset">
-            <div class="visible-xs font-movile-menu mobile-menu-button"></div>
-            <div class="full-reset container-menu-movile nav-lateral-scroll">
-                <div class="logo full-reset all-tittles">
-                    <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button" style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i> 
-                    <small>Sistema Integral Op. Electrónicas</small>
-                </div>
-                <div class="nav-lateral-divider full-reset"></div>
-                <div class="full-reset" style="padding: 10px 0; color:#fff;">
-                    <figure>
-                        <img src="app/views/assets/icons/logo.png" alt="Logo OE" class="img-responsive center-box" style="width:55%;">
-                    </figure>
-                    <p class="text-center" style="padding-top: 15px;">SIOE ('.$privilegio.')</p>
-                </div>
-                <div class="nav-lateral-divider full-reset"></div>
-                <div class="full-reset nav-lateral-list-menu">
-                    <ul class="list-unstyled">
-                        <li><a href="index.php"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
-                        <li>
-                            <div class="dropdown-menu-button"><i class="zmdi zmdi-case zmdi-hc-fw"></i>&nbsp;&nbsp; Administración <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
-                            <ul class="list-unstyled">
-                                <li><a href="listabancos.php"><i class="zmdi zmdi-balance zmdi-hc-fw"></i>&nbsp;&nbsp; Bancos</a></li>
-                                <li><a href="listatraslado.php"><i class="zmdi zmdi-truck zmdi-hc-fw"></i>&nbsp;&nbsp; Empresa de Traslado</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="dropdown-menu-button"><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Gestíon de usuarios <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
-                            <ul class="list-unstyled">
-                                <li><a href="listausuarios.php"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i>&nbsp;&nbsp; Agregar usuario</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Comercial</a></li>
-
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="dropdown-menu-button"><i class="zmdi zmdi-puzzle-piece zmdi-hc-fw"></i>&nbsp;&nbsp; Implementaciones <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw icon-sub-menu"></i></div>
-                            <ul class="list-unstyled">
-                                <li><a href="bitacora.php"><i class="zmdi zmdi-calendar zmdi-hc-fw"></i>&nbsp;&nbsp; Bitacora general</a></li>
-                                <li><a href="implementacion.php"><i class="zmdi zmdi-file-plus zmdi-hc-fw"></i>&nbsp;&nbsp; Nueva solicitud</a></li>                           
-                                <li><a href="#"><i class="zmdi zmdi-card-alert zmdi-steam-square"></i>&nbsp;&nbsp; Visitas técnicas</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-calendar-close zmdi-assignment"></i>&nbsp;&nbsp; Asignacion de cofre<span class="label label-danger pull-right label-mhover">7</span></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-devices-off zmdi-assignment-check"></i>&nbsp;&nbsp; Check-in<span class="label label-danger pull-right label-mhover">7</span></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-timer-off zmdi-calendar-check"></i>&nbsp;&nbsp; Plan de implementacion<span class="label label-danger pull-right label-mhover">7</span></a></li>
-                                <li><a href="#"><i class="zmdi zmdi-timer-off zmdi-hc-fw"></i>&nbsp;&nbsp; Liberación<span class="label label-danger pull-right label-mhover">7</span></a></li>
-    
-    
-                            </ul>
-    
-                        </li>
-                        <li><a href="#"><i class="zmdi zmdi-trending-up zmdi-hc-fw"></i>&nbsp;&nbsp; Estadisticos</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>';
-    
-    
-
-    }
 ?>
-
-
-
-
-<!-- AQUI TERMINA EL NAV LATERAL -->
-
-<!-- AQUI EMPIEZA EL NAV -->
-<div class="content-page-container full-reset custom-scroll-containers">
-        <nav class="navbar-user-top full-reset">
-            <ul class="list-unstyled full-reset">
-                <figure>
-                   <img src="app/views/assets/icons/user01.png" alt="user-picture" class="img-responsive img-circle center-box">
-                </figure>
-
-                <li style="color:#fff; cursor:default;">
-                    <span class="all-tittles"> <?php echo $nombre; ?>
-                    </span>
-                </li>
-                <li  class="tooltips-general exit-system-button" data-href="logout.php" data-placement="bottom" title="Salir del sistema">
-                    <i class="zmdi zmdi-power"></i>
-                </li>
-                <li  class="tooltips-general search-book-button" data-href="searchbook.html" data-placement="bottom" title="Buscar folio">
-                    <i class="zmdi zmdi-search"></i>
-                </li>
-                <li  class="tooltips-general btn-help" data-placement="bottom" title="Notificaciones">
-                    <i class="zmdi zmdi-help-outline zmdi-comment"></i>
-                </li>
-                <li class="mobile-menu-button visible-xs" style="float: left !important;">
-                    <i class="zmdi zmdi-menu"></i>
-                </li>
-                <li class="desktop-menu-button hidden-xs" style="float: left !important;">
-                    <i class="zmdi zmdi-swap"></i>
-                </li>
-            </ul>
-        </nav>
-<!-- AQUI TERMINA EL NAV -->
-
         <div class="container-fluid">
             <div class="page-header">
               <h1 class="all-tittles"><small>Implementaciones</small></h1>
@@ -569,7 +354,7 @@ $privilegio = $currentUser->getPrivilegio();
                         <div class="col-xs-12">
                             <legend><i class="zmdi zmdi-account-box"></i> &nbsp; Datos Generales - Responsable Comercial</legend><br>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-sm-4">
                             <div class="group-material">
                                 <input type="text" class="material-control tooltips-general" name="banco" value="<?php echo $bancoValue; ?>" placeholder="Nombre del Banco" required="" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{4,30}" maxlength="30" data-toggle="tooltip" data-placement="top" title="Solo números, máximo 3 caracteres">
                                 <span class="highlight"></span>
@@ -577,7 +362,7 @@ $privilegio = $currentUser->getPrivilegio();
                                 <label>Banco</label>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-sm-4">
                             <div class="group-material">
                                 <input type="text" class="material-control tooltips-general" name="esquemaDeAcreditacion" value="<?php echo $esquemaDeAcreditacionValue; ?>" placeholder="Esquema de Acreditacion" required="" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{4,30}" data-toggle="tooltip" data-placement="top" title="Escribe el nombre del usuario">
                                 <span class="highlight"></span>
@@ -585,7 +370,7 @@ $privilegio = $currentUser->getPrivilegio();
                                 <label>Esquema de acreditación</label>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-sm-4">
                             <div class="group-material">
                                 <input type="text" class="material-control tooltips-general" name="tipoDeAcreditacionMismoDia" value="<?php echo $tipoDeAcreditacionMismoDiaValue; ?>" placeholder="Tipo de Acreditacion Mismo Día" required="" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,30}" data-toggle="tooltip" data-placement="top" title="Apellido paterno del usuario">
                                 <span class="highlight"></span>
@@ -593,7 +378,7 @@ $privilegio = $currentUser->getPrivilegio();
                                 <label>Tipo de Acreditación Mismo Dia</label>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-sm-4">
                             <div class="group-material">
                                 <input type="text" class="material-control tooltips-general" name="accesoPortalSitef" value="<?php echo $accesoPortalSitefValue; ?>" placeholder="Acceso a Portal SITEF" required="" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,30}" data-toggle="tooltip" data-placement="top" title="Apellido materno del usuario">
                                 <span class="highlight"></span>
@@ -601,7 +386,7 @@ $privilegio = $currentUser->getPrivilegio();
                                 <label>Acceso Portal SITEF</label>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-sm-4">
                             <div class="group-material">
                                 <input type="text" class="material-control tooltips-general" name="giroDeCliente" value="<?php echo $giroDeClienteValue; ?>" placeholder="Giro de Cliente" required="" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,30}" data-toggle="tooltip" data-placement="top" title="Escribe el número de empleado">
                                 <span class="highlight"></span>
@@ -609,7 +394,7 @@ $privilegio = $currentUser->getPrivilegio();
                                 <label>Giro del cliente</label>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-sm-4">
                             <div class="group-material">
                                 <input type="text" class="material-control tooltips-general" name="nombreComercial" value="<?php echo $nombreComercialValue; ?>" placeholder="Nombre Comercial" maxlength="50" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{5,50}" data-toggle="tooltip" data-placement="top" title="Escribe el nombre de la sociedad">
                                 <span class="highlight"></span>
